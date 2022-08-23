@@ -1,0 +1,168 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --base-color: 194;
+  --bg-primary-light: hsla(var(--base-color), 97%, 31%, 1);
+  --primary-color: hsl(var(--base-color), 9%, 89%);
+
+  --text-fc: hsla(240, 6%, 21%, 1);
+  --text-ff: 'Roboto', sans-serif;
+  --text-fs: 12.6rem;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: var(--text-ff);
+  color: var(--text-fc);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 100vh;
+  margin-top: -10rem;
+}
+
+main {
+  display: flex;
+  justify-self: center;
+  align-self: center;
+  gap: 19.2rem;
+  padding-bottom: 12rem;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.timer {
+  display: flex;
+  font-size: var(--text-fs);
+  line-height: 14.8rem;
+  font-weight: 500;
+  margin-bottom: 4.8rem;
+  margin-top: 5.8rem;
+}
+
+.hide {
+  display: none;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+}
+
+.rightbox {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3.2rem;
+}
+
+.cards {
+  background-color: #E1E1E6;
+  border-radius: 2.4rem;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  align-content: space-evenly;
+  width: 13.8rem;
+  height: 15.2rem;
+}
+
+.cards,
+.cards svg path,
+.pause svg path  {
+  fill: #323238;
+}
+
+.selected, 
+.selected svg path {
+  background-color: #02799D;
+  fill: white;
+}
+
+header {
+  justify-self: end; 
+  align-self: end;
+  padding: 0 6.4rem 6.4rem 0;
+}
+
+.slider {
+  -webkit-appearance: none;
+  height: 0.4rem;
+  width: 9rem;
+  border-radius: 5px;
+  background:  #323238;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 50%; 
+  background:  #323238;
+  cursor: pointer;
+}
+
+.selected .slider {
+  -webkit-appearance: none;
+  height: 0.4rem;
+  width: 9rem;
+  border-radius: 5px; 
+  background:white;
+}
+
+.selected .slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 50%; 
+  background:white;
+  cursor: pointer;
+}
+
+body.dark {
+  background-color: #121214;
+  color: white;
+}
+
+body.dark svg path {
+  fill: #C4C4CC;
+}
+
+body.dark .cards {
+  background-color: #29292E;
+}
+
+body.dark .selected,
+body.dark .selected svg path {
+  background-color: #0A3442;
+  fill: white;
+}
+
+body.dark .slider {
+  -webkit-appearance: none;
+  height: 0.4rem;
+  width: 9rem;
+  border-radius: 5px;
+  background:  #FFFFFF;
+}
+
+body.dark .slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 50%; 
+  background:  #FFFFFF;
+  cursor: pointer;
+}
